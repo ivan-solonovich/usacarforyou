@@ -2,9 +2,9 @@
 <div class="header-container container container-lg">
   <div class="logo-container">
 
-      <img class="logo-brand"  src="../../assets/logo/main-logo50px.png" alt="Logo">
+      <img class="logo-brand"  src="../../../assets/logo/main-logo50px.png" alt="Logo">
       <div class="logo">
-        <img src="../../assets/logo/usacarforyou.png" alt="">
+        <img src="../../../assets/logo/uscarforyou350.png" alt="">
       </div>
   </div>
   <div class="menu-container">
