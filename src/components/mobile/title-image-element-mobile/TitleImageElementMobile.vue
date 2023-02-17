@@ -1,6 +1,6 @@
 <template>
   <div class="video-wrapper">
-    <video :width="videoOfWidth" style="border-radius: 2rem" autoplay muted loop>
+    <video playsinline :width="videoOfWidth" style="border-radius: 2rem" autoplay="autoplay" muted loop="loop">
       <source src="../../../assets/video/gorgeous-woman.mp4" type="video/mp4">
       Error Message
     </video>
