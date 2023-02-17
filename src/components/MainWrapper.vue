@@ -1,11 +1,11 @@
 <template>
 <div class="main-wrapper">
-  <div id="decstop" v-show="!isMobile">
+  <div id="decstop" v-show="!isMobile" >
         <HeaderContainer/>
-        <div class="content-wrapper container d-lg-flex align-items-lg-center content-space-t-3 content-space-lg-0 min-vh-lg-100">
+        <div class="content-wrapper container d-lg-flex align-items-lg-center content-space-t-1 content-space-lg-0 min-vh-lg-100">
+          <MainContent/>
+         <TitleImageElement/>
 
-        <TitleImageElement/>
-        <MainContent/>
     </div>
 
   </div>
@@ -37,7 +37,7 @@ export default {
   name: "MainWrapper",
   data(){
     return{
-
+      isMobile: false
     }
   },
   components:{
@@ -48,18 +48,23 @@ export default {
     HeaderContainerMobile
   },
  computed:{
-    isMobile() {
 
-        if(innerWidth < 1280) {
-          console.log('mobile')
-          console.log(innerWidth)
-          return true
-        } else {
-          console.log('desktop')
-          return false
-        }
-    }
-
+  },
+  created() {
+    window.addEventListener('load', ()=>{
+      if (innerWidth<1280){
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    })
+    window.addEventListener('resize', ()=>{
+      if (innerWidth<1280){
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    })
   },
   methods:{
     windowWidth(){

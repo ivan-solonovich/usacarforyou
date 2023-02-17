@@ -1,6 +1,6 @@
 <template>
   <div class="video-wrapper">
-    <video :width="videoOfWidthChecker" style="border-radius: 2rem" autoplay muted loop>
+    <video :width="videoOfWidth" style="border-radius: 2rem" autoplay muted loop>
       <source src="../../../assets/video/gorgeous-woman.mp4" type="video/mp4">
       Error Message
     </video>
@@ -14,15 +14,20 @@ export default {
   name: "TitleImageElement",
   data() {
     return{
-
+      videoOfWidth: window.innerWidth
     }},
-    computed:{
+    created(){
+      window.addEventListener('load', ()=>{
+        this.videoOfWidth = window.innerWidth - 100;
+        console.log(window.innerWidth)
+        console.log( this.videoOfWidth)
+      })
+      window.addEventListener('resize', ()=>{
+        this.videoOfWidth = window.innerWidth - 40;
+      })
 
-      videoOfWidthChecker(){
-       let videoOfWidth = window.innerWidth - 20;
-        return  videoOfWidth
       }
-    }
+
 }
 </script>
 
@@ -31,5 +36,6 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 </style>
