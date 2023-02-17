@@ -18,7 +18,7 @@ export default {
     }},
     created(){
       window.addEventListener('load', ()=>{
-        this.videoOfWidth = window.innerWidth - 100;
+        this.videoOfWidth = window.innerWidth - 40;
         console.log(window.innerWidth)
         console.log( this.videoOfWidth)
       })

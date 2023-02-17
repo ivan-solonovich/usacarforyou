@@ -2,7 +2,7 @@
 <div class="main-wrapper">
   <div id="decstop" v-show="!isMobile" >
         <HeaderContainer/>
-        <div class="content-wrapper container d-lg-flex align-items-lg-center content-space-t-1 content-space-lg-0 min-vh-lg-100">
+        <div class="content-wrapper container-fluid d-xl-flex align-items-xl-center content-space-t-1 content-space-xl-0 min-vh-xl-100">
           <MainContent/>
          <TitleImageElement/>
 
@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style scoped>
+main-wrapper{
+  max-width: 1480px;
+}
 .content-wrapper{
   width: 100%;
   height: 750px;
